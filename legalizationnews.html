@@ -8,6 +8,7 @@
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
     <!-- jQuery first, Popper.js, Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -18,12 +19,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="jquery-1.11.2.js"></script>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/cbb868d5b2.js" crossorigin="anonymous"></script>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet">
+    <script src="jquery-3.5.0.min.js"></script>
+
+
     <!-- favicon -->
 </head>
+
 
 <body>
     <!--NAV BAR-->
@@ -32,6 +38,7 @@
           <a class="navbar-brand" href="index.html">
             <img id="logo-navbar-middle" src="images/Mobilelog3.png" width="100" alt="Transform Cannabis logo">
           </a>
+
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -66,7 +73,14 @@
                     <a class="nav-link" href="contact.html">CONTACT</a>
                 </li>
                 <button class="btn btn-success navbar-btn" onclick="window.location.href = 'donate.html';">DONATE</button>
+
               </li>
+              <div class="sociallinks">
+              <a href="https://www.facebook.com/" target="_blank" class="icon"><i class="fab fa-facebook-square"></i></a>
+              <a href="https://www.instagram.com/" target="_blank" class="icon"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.twitter.com/transform420" target="_blank" class="icon"><i class="fab fa-twitter-square"></i></a>
+              <a href="mailto:" target="_blank" class="icon"><i class="far fa-envelope"></i></a>
+
             </ul>
           </div>
         </div>
@@ -229,18 +243,120 @@
       <!-- /.modal-dialog -->
     </div>
     <!-- /.modal -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+          $('#makeBigger').click(function () {
+              changeFontSize('increase');
+          });
+
+          $('#makeSmaller').click(function () {
+              changeFontSize('decrease');
+          });
+
+          $('#makeReset').click(function () {
+              changeFontSize('reset');
+          })
+
+          function changeFontSize(flag) {
+              var targetArea = $('#divContent');
+              var currentFontSize = parseInt(targetArea.css('font-size'));
+
+              if (flag == 'increase')
+                  currentFontSize += 3;
+              else if (flag == 'decrease')
+                  currentFontSize -= 3;
+              else
+                  currentFontSize = 16;
+
+              targetArea.css('font-size', currentFontSize);
+          }
+      });
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+        $('#makeBigger2').click(function () {
+            changeFontSize2('increase');
+        });
+
+        $('#makeSmaller2').click(function () {
+            changeFontSize2('decrease');
+        });
+
+        $('#makeReset2').click(function () {
+            changeFontSize2('reset');
+        })
+
+        function changeFontSize2(flag) {
+            var targetArea2 = $('#divContent2');
+            var currentFontSize2 = parseInt(targetArea2.css('font-size'));
+
+            if (flag == 'increase')
+                currentFontSize2 += 3;
+            else if (flag == 'decrease')
+                currentFontSize2 -= 3;
+            else
+                currentFontSize2 = 16;
+
+            targetArea2.css('font-size', currentFontSize2);
+        }
+    });
+</script>
+<script type="text/javascript">
+  $(document).ready(function () {
+      $('#makeBigger3').click(function () {
+          changeFontSize3('increase');
+      });
+
+      $('#makeSmaller3').click(function () {
+          changeFontSize3('decrease');
+      });
+
+      $('#makeReset3').click(function () {
+          changeFontSize3('reset');
+      })
+
+      function changeFontSize3(flag) {
+          var targetArea3 = $('#divContent3');
+          var currentFontSize3 = parseInt(targetArea3.css('font-size'));
+
+          if (flag == 'increase')
+              currentFontSize3 += 3;
+          else if (flag == 'decrease')
+              currentFontSize3 -= 3;
+          else
+              currentFontSize3 = 16;
+
+          targetArea3.css('font-size', currentFontSize3);
+      }
+  });
+</script>
+
+
+
+
+
+
 
       <!-- content -->
+
+
       <main role="main" class="flex-shrink-0">
 
         <div class="container pt-5">
           <div class="row justify-content-between">
-            <div class="col-md-8 col-sm-8">
+            <div class="col-md-8 col-sm-8" id="divContent">
+              Font-Size:
+              <a id="makeBigger" href="#"><img src="increase.png" alt="increase"</a>
+              <a id="makeSmaller" href="#"><img src="decrease2.png" alt="decrease"</a>
+              <a id="makeReset" href="#"><img src="reset2.png" alt="reset"></a>
+              <br /><br />
               <h2>Legalization News</h2>
               <p>The following is a small summation of United State residence constitutional rights and is meant to provide helpful
                 tips on how to protect those rights within context. This is NOT a substitution for consultation from an experienced attorney. </p>
             </div>
             <div class="col-sm-4 text-center">
+              <div class="try">
               <img src="images/legal.jpg" alt="Legal" height="auto" width="100%">
             </div>
 
@@ -301,17 +417,36 @@
         </script>
         <script type="text/javascript" src="//feed.surfing-waves.com/js/rss-feed.js"></script>
 </div>
+</div>
 
 
         <hr class="mx-5">
+        <div>
+        Font-Size:
+        <a id="makeBigger2" href="#"><img src="increase.png" alt="increase"</a>
+        <a id="makeSmaller2" href="#"><img src="decrease2.png" alt="reset"></a>
+        <a id="makeReset2" href="#"><img src="reset2.png" alt="reset"></a>
+        <br /><br />
+        </div>
         <div class="container pt-5">
           <div class="row justify-content-between">
+            <div class id="divContent2">
+
             <h2>Your Rights</h2>
             <p>Per the Fourth Amendment to the Bill of Rights of the United States Constitution: <br>
               "The right of the people to be secure in their persons, houses, papers, and effects, against unreasonable searches and seizures,
               shall not be violates, and no Warrants shall issue, but upon probable cause, supported by Oath or affirmation, and particularly
               describing the place to be searched, and the persons or things to be seized."</p>
             </div>
+          </div>
+          <div class id="divContent3">
+            Font-Size:
+            <a id="makeBigger3" href="#"><img src="increase.png" alt="increase"</a>
+            <a id="makeSmaller3" href="#"><img src="decrease2.png" alt="reset"></a>
+            <a id="makeReset3" href="#"><img src="reset2.png" alt="reset"></a>
+            <br /><br />
+
+
             <p>Here are a couple of tips when dealing with the law:</p>
             <ol type="1">
               <li>Do NOT leave contraband in plain view:</li>
@@ -348,19 +483,20 @@
                   your decisions with a expert criminal defense attorney. <br><br>
                   Feel free to download <a href="https://norml.org/pdf_files/freedom_card.pdf">NORML's Freedom Card</a>, a quick reference of your rights.</p>
         </div>
-      </main>
 
+
+      </main>
   <!-- FOOTER -->
   <footer class="footer mt-auto py-3">
     <div class="container">
-      <div class="row justify-content-between align-items-center">
+      <div class="row justify-content-between align-items-center"id="divContent">
         <div class="col">
           <a href="index.html"><img id="logo-navbar-middle" src="images/Mobilelog3.png" width="100" alt="Transform Cannabis logo"></a>
         </div>
         <div class="col text-right">
           <a href="https://www.facebook.com/" target="_blank" class="icon"><i class="fab fa-facebook-square"></i></a>
           <a href="https://www.instagram.com/" target="_blank" class="icon"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.twitter.com/" target="_blank" class="icon"><i class="fab fa-twitter-square"></i></a>
+          <a href="https://www.twitter.com/transform420" target="_blank" class="icon"><i class="fab fa-twitter-square"></i></a>
           <a href="mailto:" target="_blank" class="icon"><i class="far fa-envelope"></i></a>
         </div>
       </div>
