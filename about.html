@@ -14,6 +14,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <!-- Age Verification & bootstrap jquery/propper/js-->
     <script src="js/ageverify.js"></script>
+    <script src="js/jquery-3.5.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -66,7 +67,13 @@
                     <a class="nav-link" href="contact.html">CONTACT</a>
                 </li>
                 <button class="btn btn-success navbar-btn" onclick="window.location.href = 'donate.html';">DONATE</button>
+
               </li>
+              <div class="sociallinks">
+              <a href="https://www.facebook.com/" target="_blank" class="icon"><i class="fab fa-facebook-square"></i></a>
+              <a href="https://www.instagram.com/" target="_blank" class="icon"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.twitter.com/transform420" target="_blank" class="icon"><i class="fab fa-twitter-square"></i></a>
+              <a href="mailto:" target="_blank" class="icon"><i class="far fa-envelope"></i></a>
             </ul>
           </div>
         </div>
@@ -229,24 +236,175 @@
       <!-- /.modal-dialog -->
     </div>
     <!-- /.modal -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+          $('#makeBigger').click(function () {
+              changeFontSize('increase');
+          });
+
+          $('#makeSmaller').click(function () {
+              changeFontSize('decrease');
+          });
+
+          $('#makeReset').click(function () {
+              changeFontSize('reset');
+          })
+
+          function changeFontSize(flag) {
+              var targetArea = $('#divContent');
+              var currentFontSize = parseInt(targetArea.css('font-size'));
+
+              if (flag == 'increase')
+                  currentFontSize += 3;
+              else if (flag == 'decrease')
+                  currentFontSize -= 3;
+              else
+                  currentFontSize = 16;
+
+              targetArea.css('font-size', currentFontSize);
+          }
+      });
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+        $('#makeBigger2').click(function () {
+            changeFontSize2('increase');
+        });
+
+        $('#makeSmaller2').click(function () {
+            changeFontSize2('decrease');
+        });
+
+        $('#makeReset2').click(function () {
+            changeFontSize2('reset');
+        })
+
+        function changeFontSize2(flag) {
+            var targetArea2 = $('#divContent2');
+            var currentFontSize2 = parseInt(targetArea2.css('font-size'));
+
+            if (flag == 'increase')
+                currentFontSize2 += 3;
+            else if (flag == 'decrease')
+                currentFontSize2 -= 3;
+            else
+                currentFontSize2 = 16;
+
+            targetArea2.css('font-size', currentFontSize2);
+        }
+    });
+</script>
+<script type="text/javascript">
+  $(document).ready(function () {
+      $('#makeBigger3').click(function () {
+          changeFontSize3('increase');
+      });
+
+      $('#makeSmaller3').click(function () {
+          changeFontSize3('decrease');
+      });
+
+      $('#makeReset3').click(function () {
+          changeFontSize3('reset');
+      })
+
+      function changeFontSize3(flag) {
+          var targetArea3 = $('#divContent3');
+          var currentFontSize3 = parseInt(targetArea3.css('font-size'));
+
+          if (flag == 'increase')
+              currentFontSize3 += 3;
+          else if (flag == 'decrease')
+              currentFontSize3 -= 3;
+          else
+              currentFontSize3 = 16;
+
+          targetArea3.css('font-size', currentFontSize3);
+      }
+  });
+</script>
+<script type="text/javascript">
+  $(document).ready(function () {
+      $('#makeBigger4').click(function () {
+          changeFontSize4('increase');
+      });
+
+      $('#makeSmaller4').click(function () {
+          changeFontSize4('decrease');
+      });
+
+      $('#makeReset4').click(function () {
+          changeFontSize4('reset');
+      })
+
+      function changeFontSize4(flag) {
+          var targetArea4 = $('#divContent4');
+          var currentFontSize4 = parseInt(targetArea4.css('font-size'));
+
+          if (flag == 'increase')
+              currentFontSize4 += 3;
+          else if (flag == 'decrease')
+              currentFontSize4 -= 3;
+          else
+              currentFontSize4 = 16;
+
+          targetArea4.css('font-size', currentFontSize4);
+      }
+  });
+</script>
+<script type="text/javascript">
+  $(document).ready(function () {
+      $('#makeBigger5').click(function () {
+          changeFontSize5('increase');
+      });
+
+      $('#makeSmaller5').click(function () {
+          changeFontSize5('decrease');
+      });
+
+      $('#makeReset5').click(function () {
+          changeFontSize5('reset');
+      })
+
+      function changeFontSize5(flag) {
+          var targetArea5 = $('#divContent5');
+          var currentFontSize5 = parseInt(targetArea5.css('font-size'));
+
+          if (flag == 'increase')
+              currentFontSize5 += 3;
+          else if (flag == 'decrease')
+              currentFontSize5 -= 3;
+          else
+              currentFontSize5 = 16;
+
+          targetArea5.css('font-size', currentFontSize5);
+      }
+  });
+</script>
+
 
       <!-- content -->
-      <main role="main" class="flex-shrink-0">
-
-        <div class="container pt-5">
-          <div class="row justify-content-between">
-            <div class="col-sm-4 text-center">
-              <img src="images/transformCannabislogo.png" alt="logo" height="auto" width="100%">
-            </div>
-            <div class="col-md-8 col-sm-8">
-              <h2>Who We Are</h2>
-              <p>Transform Cannabis is a team of individuals who promote the education of cannabis for those who are willing to learn.
-                Our main goal is we want people to know the truth about cannabis regardless of the societal stigma regarding Cannabis. </p>
+      <div class="container pt-5">
+            <div class="row justify-content-between">
+              <div class="col-sm-4 text-center">
+                <img src="images/transformCannabislogo.png" alt="logo" height="auto" width="100%">
+              </div>
+              <div class="col-md-8 col-sm-8">
+                <h2>Who We Are</h2>
+                <p>Transform Cannabis is a team of individuals who promote the education of cannabis for those who are willing to learn.
+                  Our main goal is we want people to know the truth about cannabis regardless of the societal stigma regarding Cannabis. </p>
+              </div>
             </div>
           </div>
-        </div>
         <hr class="mx-5">
         <div class="container pt-5">
+          <div class id="divContent5">
+            Font-Size:
+            <a id="makeBigger5" href="#"><img src="./images/increase.png" alt="increase"</a>
+            <a id="makeSmaller5" href="#"><img src="./images/decrease2.png" alt="decrease"</a>
+            <a id="makeReset5" href="#"><img src="./images/reset2.png" alt="reset"></a>
+            <br /><br />
           <div class="row justify-content-between">
             <h2>Vision & Mission</h2>
             <p>The mission of Transform Cannabis is to educate Floridians and Americans about the different resources that the Cannabis
@@ -256,6 +414,12 @@
         <hr class="mx-5">
         <div class="container pt-5">
           <div class="row justify-content-between">
+            <div class id="divContent">
+              Font-Size:
+              <a id="makeBigger" href="#"><img src="increase.png" alt="increase"</a>
+              <a id="makeSmaller" href="#"><img src="decrease2.png" alt="decrease"</a>
+              <a id="makeReset" href="#"><img src="reset2.png" alt="reset"></a>
+              <br /><br />
             <h2>Overview of the History of Cannabis</h2>
             <p>Cannabis can first be noticed around 500 BC used in ancient cultures as a medicinal herb. <br><br>
               The first instance of cannabis in America was when our early colonial ancestors brought over
@@ -272,9 +436,18 @@
             </p>
           </div>
         </div>
+
+
         <hr class="mx-5">
         <div class="container pt-5">
           <div class="row justify-content-between">
+            <div class id="divContent2">
+              Font-Size:
+              <a id="makeBigger2" href="#"><img src="increase.png" alt="increase"</a>
+              <a id="makeSmaller2" href="#"><img src="decrease2.png" alt="decrease"</a>
+              <a id="makeReset2" href="#"><img src="reset2.png" alt="reset"></a>
+              <br /><br />
+
             <h2>History of Marijuana Prohibition</h2>
             <p>The history of Marijuana prohibition in the United States begins around the early 1900's shortly after the Mexican Revolution. After
               the conclusion of the Mexican Revolution, many immigrants made their way to the United States. With the surge of new Americans
@@ -298,6 +471,12 @@
         <hr class="mx-5">
         <div class="container pt-5">
           <div class="row justify-content-between">
+            <div class id="divContent3">
+              Font-Size:
+              <a id="makeBigger3" href="#"><img src="increase.png" alt="increase"</a>
+              <a id="makeSmaller3" href="#"><img src="decrease2.png" alt="decrease"</a>
+              <a id="makeReset3" href="#"><img src="reset2.png" alt="reset"></a>
+              <br /><br />
             <h2>History of Marijuana Legalization</h2>
             <p>In 1996, California became the first state to approve use for marijuana for medicinal purposes. This was a big step for cannabis advocates as it
               ended 59 years of declining that marijuana had 0 medical purposes.  <br><br>
@@ -309,32 +488,34 @@
               Currently there are 11 states, including Washington D.C.  where cannabis is legal for recreational use for persons 21+ and 33 states where medical
               cannabis is legal. Although cannabis is legal in some states, it is still federally illegal. Without the federal government lifting the ban on cannabis,
               the United States are not allowed to research or test marijuana for scientific observation or obtain qualitative data. <br><br>
-              <a href="https://www.drugpolicy.org/blog/how-did-marijuana-become-illegal-first-place">Refrences</a>
+              <a href="https://www.drugpolicy.org/blog/how-did-marijuana-become-illegal-first-place">References</a>
             </p>
           </div>
         </div>
-      </main>
-
-  <!-- FOOTER -->
-  <footer class="footer mt-auto py-3">
-    <div class="container">
-      <div class="row justify-content-between align-items-center">
-        <div class="col">
-          <a href="index.html"><img id="logo-navbar-middle" src="images/Mobilelog3.png" width="100" alt="Transform Cannabis logo"></a>
-        </div>
-        <div class="col text-right">
-          <a href="https://www.facebook.com/" target="_blank" class="icon"><i class="fab fa-facebook-square"></i></a>
-          <a href="https://www.instagram.com/" target="_blank" class="icon"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.twitter.com/" target="_blank" class="icon"><i class="fab fa-twitter-square"></i></a>
-          <a href="mailto:" target="_blank" class="icon"><i class="far fa-envelope"></i></a>
-        </div>
       </div>
-      <div class="row copyright text-center small px-4 pt-4">
-        <p>Transform Cannabis was created by Samantha Billings, Hal Jundzil, Katherine Leung, Kyle Melendez, and Molly Murtha for DIG4172c taught by Professor Dan Novatnak.
-          <br><br>&copy; Transform Cannabis 2020</p>
+      </main>
+</div>
+</div>
+</div>
+<footer class="footer mt-auto py-3">
+  <div class="container">
+    <div class="row justify-content-between align-items-center">
+      <div class="col">
+        <a href="index.html"><img id="logo-navbar-middle" src="images/Mobilelog3.png" width="100" alt="Transform Cannabis logo"></a>
+      </div>
+      <div class="col text-right">
+        <a href="https://www.facebook.com/" target="_blank" class="icon"><i class="fab fa-facebook-square"></i></a>
+        <a href="https://www.instagram.com/" target="_blank" class="icon"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.twitter.com/transform420" target="_blank" class="icon"><i class="fab fa-twitter-square"></i></a>
+        <a href="mailto:" target="_blank" class="icon"><i class="far fa-envelope"></i></a>
       </div>
     </div>
-  </footer>
+    <div class="row copyright text-center small px-4 pt-4">
+      <p>Transform Cannabis was created by Samantha Billings, Hal Jundzil, Katherine Leung, Kyle Melendez, and Molly Murtha for DIG4172c taught by Professor Dan Novatnak.
+        <br><br>&copy; Transform Cannabis 2020</p>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>

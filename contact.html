@@ -19,6 +19,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="js/jquery-3.5.0.min.js"></script>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/cbb868d5b2.js" crossorigin="anonymous"></script>
     <!-- Google Fonts -->
@@ -67,6 +68,14 @@
                     <a class="nav-link" href="contact.html">CONTACT</a>
                 </li>
                 <button class="btn btn-success navbar-btn" onclick="window.location.href = 'donate.html';">DONATE</button>
+                <!-- Social media icons -->
+                <div class="col text-center">
+                  <a href="https://www.facebook.com/" target="_blank" class="icon"><i class="fab fa-facebook-square"></i></a>
+                  <a href="https://www.instagram.com/" target="_blank" class="icon"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.twitter.com/transform420" target="_blank" class="icon"><i class="fab fa-twitter-square"></i></a>
+                  <a href="mailto:" target="_blank" class="icon"><i class="far fa-envelope"></i></a>
+                </div>
+            </main>
               </li>
             </ul>
           </div>
@@ -230,12 +239,48 @@
       <!-- /.modal-dialog -->
     </div>
     <!-- /.modal -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+          $('#makeBigger').click(function () {
+              changeFontSize('increase');
+          });
 
+          $('#makeSmaller').click(function () {
+              changeFontSize('decrease');
+          });
+
+          $('#makeReset').click(function () {
+              changeFontSize('reset');
+          })
+
+          function changeFontSize(flag) {
+              var targetArea = $('#divContent');
+              var currentFontSize = parseInt(targetArea.css('font-size'));
+
+              if (flag == 'increase')
+                  currentFontSize += 3;
+              else if (flag == 'decrease')
+                  currentFontSize -= 3;
+              else
+                  currentFontSize = 16;
+
+              targetArea.css('font-size', currentFontSize);
+          }
+      });
+  </script>
 <!-- Contact Form -->
 <main role="main" class="flex-shrink-0">
 
     <div class="container pt-5">
+      <div class id="divContent">
+        Font-Size:
+        <a id="makeBigger" href="#"><img src="./images/increase.png" alt="increase"</a>
+        <a id="makeSmaller" href="#"><img src="./images/decrease2.png" alt="decrease"</a>
+        <a id="makeReset" href="#"><img src="./images/reset2.png" alt="reset"></a>
+        <br /><br />
+
       <div class="row justify-content-between">
+
         <div class="col-md-6 col-sm-6">
           <h2>Contact Us</h2>
         <form>
@@ -265,13 +310,7 @@
         </div>
     </div>
 
-    <!-- Social media icons -->
-    <div class="col text-center">
-      <a href="https://www.facebook.com/" target="_blank" class="icon"><i class="fab fa-facebook-square"></i></a>
-      <a href="https://www.instagram.com/" target="_blank" class="icon"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.twitter.com/" target="_blank" class="icon"><i class="fab fa-twitter-square"></i></a>
-      <a href="mailto:" target="_blank" class="icon"><i class="far fa-envelope"></i></a>
-    </div>
+
 </main>
 
   <!-- FOOTER -->
@@ -284,7 +323,7 @@
         <div class="col text-right">
           <a href="https://www.facebook.com/" target="_blank" class="icon"><i class="fab fa-facebook-square"></i></a>
           <a href="https://www.instagram.com/" target="_blank" class="icon"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.twitter.com/" target="_blank" class="icon"><i class="fab fa-twitter-square"></i></a>
+          <a href="https://www.twitter.com/transform420" target="_blank" class="icon"><i class="fab fa-twitter-square"></i></a>
           <a href="mailto:" target="_blank" class="icon"><i class="far fa-envelope"></i></a>
         </div>
       </div>
